@@ -1,0 +1,299 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*fonts*/
+@font-face {
+    font-family: "AmsiPro-Ultra";
+    src: url("./fonts/AmsiPro-Ultra.ttf");
+  }
+@font-face {
+    font-family: "AmsiPro-SemiBold";
+    src: url("./fonts/AmsiPro-SemiBold.ttf");
+  }
+@font-face {
+    font-family: "AmsiPro-Regular";
+    src: url("./fonts/AmsiPro-Regular.ttf");
+  }
+@font-face {
+    font-family: "AmsiPro-Light";
+    src: url("./fonts/AmsiPro-Light.ttf");
+  }
+@font-face {
+    font-family: "AmsiPro-Black";
+    src: url("./fonts/AmsiPro-Black.ttf");
+}
+/*variables*/
+$base-color: #ea1190;
+$green-color: #2AEA86;
+
+/*mixins*/
+@mixin home-title-Mobile{
+    font-family: "AmsiPro-Ultra";
+    font-size: 45px;
+    text-transform: uppercase;
+    line-height: 38px;
+}
+
+/*global*/
+body {
+    background-color: $base-color;
+    color: #fff;
+}
+/*HomeMobile*/
+.bg-body-tertiary{
+    background-color: $base-color !important;
+        .container-fluid{
+            padding-left: 0 !important;
+                a{
+                    font-family: "AmsiPro-Ultra";
+                    font-size: 22px;
+                    text-transform: uppercase;
+                    color: #fff
+                }
+                .span--logo{
+                    color: $green-color;
+                }
+                span{
+                    color: #fff;
+                }
+                .navbar-toggler{
+                    color: #fff;
+                }
+                div{
+                    ul{
+                        li{
+                            a{
+                                color: #fff;
+                                font-size: 16px;
+                                font-family: "AmsiPro-Regular";
+                                text-transform: capitalize;
+                            }
+                            .av-link, .active{
+                                color: #fff
+                            }
+                        }
+                    }
+                }
+        }
+}
+.title__home{
+    h1{
+        @include home-title-Mobile;
+        margin-top: 10px;
+        color: #fff;
+            span{
+                color: $green-color;
+            }
+    }
+}
+.category__container{
+    display: grid;
+    grid-template-columns: repeat(2 150px);
+    grid-template-rows: repeat(3 150px);
+    margin-top: 20px;
+        .category__home{
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .category__txt{
+            color: #fff;
+            text-decoration: none;
+            font-family: "AmsiPro-Black";
+            font-size: 16x;
+            text-transform: uppercase;
+            text-align: center;
+            line-height: 16px;
+        }
+        .category__home--1{
+            background-image: url(./media/modaurbana.jpg);
+            background-position: center;
+            background-size: cover;
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+        .category__home--2{
+            background-image: url(./media/uniformes.jpg);
+            background-position: center;
+            background-size: cover;
+            grid-column: 2/3;
+            grid-row: 1/2;
+        }
+        .category__home--3{
+            background-image: url(./media/ropatrabajo.jpg);
+            background-position: center;
+            background-size: cover;
+            grid-column: 1/2;
+            grid-row: 3/4;
+        }
+        .category__home--4{
+            background-image: url(./media/servicios.jpg);
+            background-position: center;
+            background-size: cover;
+            grid-column: 2/3;
+            grid-row: 3/4;
+        }
+        .category__home--5{
+            background-image: url(./media/accesorios.jpg);
+            background-position: center;
+            background-size: cover;
+            grid-column: 1/2;
+            grid-row: 4/5;
+        }
+        .category__home--6{
+            background-image: url(./media/gaucha.jpg);
+            background-position: center;
+            background-size: cover;
+            grid-column: 2/3;
+            grid-row: 4/5;
+        }
+}
+.quienessomos{
+    margin-top: 20px;
+        h2{
+            font-family: "AmsiPro-Light";
+            font-size: 28px;
+            text-align: center;
+            line-height: 35px;
+                span{
+                    color: $green-color;
+                }
+        }
+        .txt__container{
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+                p{
+                    padding: 10px;
+                    text-align: justify;
+                    font-family: "AmsiPro-Regular";
+                    font-size: 16px;
+                }
+        }
+}
+.crecimos{
+    background-image: url(./media/crecimos.jpg);
+    background-position: center;
+    width: 100%;
+    height: 250px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+        .crecimos__title{
+            font-family: "AmsiPro-Ultra";
+            text-transform: uppercase;
+            font-size: 40px;
+            line-height: 35px;
+                span{
+                    color: $green-color;
+                }
+        }
+}
+.services__container{
+    margin-top: 40px;
+        .services--1{
+            display: flex;
+            flex-direction: column;
+                .services__txt{
+                    font-family: "AmsiPro-Ultra";
+                    text-transform: uppercase;
+                    font-size: 35px;
+                    line-height: 35px;
+                    padding-left: 10px;
+                }
+                p{
+                    padding: 10px;
+                    font-family: "AmsiPro-Regular";
+                    font-size: 16px;
+                    text-align: justify;
+                }
+        }
+        .services--2{
+            display: flex;
+            align-items: center;
+            padding: 20px;
+                img{
+                    width: 70px;
+                }
+                p{
+                    padding: 20px;
+                    font-family: "AmsiPro-Regular";
+                    font-size: 16px;
+                }
+        }
+        .services--3{
+            display: flex;
+            align-items: center;
+            padding: 20px;
+                img{
+                    width: 70px;
+                }
+                p{
+                    padding: 20px;
+                    font-family: "AmsiPro-Regular";
+                    font-size: 16px;
+                }
+        }
+}
+.banner__home--2{
+    background-image: url(./media/banner_2.jpg);
+    background-position: center;
+    border-radius: 10px;
+    width: 93%;
+    height: 630px;
+    margin: auto;
+        .form__container{
+            width: 270px;
+                h3{
+                    font-family: "AmsiPro-Ultra";
+                    text-transform: uppercase;
+                    font-size: 36px;
+                    text-align: center;
+                    margin-top: 20px;
+                }
+                p{
+                    font-family: "AmsiPro-Light";
+                    font-size: 22px;
+                    padding: 10px;
+                    line-height: 28px;
+                }
+                form{
+                    width: 270px;
+                        input, textarea{
+                            width: 100%;
+                            margin-top: 10px;
+                            border-bottom: 1px solid #fff;
+                        }
+                        textarea{
+                            height: 200px;
+                        }
+                        
+                }
+        }
+}
+.footer__container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+        .footer-left{
+            h2{
+                font-family: "AmsiPro-Ultra";
+                font-size: 30px;
+                text-transform: uppercase;
+            }
+        }
+}
+
+
+/*HomeTablet*/
+@media only screen and (min-width:576px){
+
+
+
+
+}
+
