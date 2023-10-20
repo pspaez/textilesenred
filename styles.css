@@ -211,7 +211,7 @@ body {
   padding: 20px;
 }
 .services__container .services--2 img {
-  width: 70px;
+  width: 50px;
 }
 .services__container .services--2 p {
   padding: 20px;
@@ -224,7 +224,7 @@ body {
   padding: 20px;
 }
 .services__container .services--3 img {
-  width: 70px;
+  width: 50px;
 }
 .services__container .services--3 p {
   padding: 20px;
@@ -271,12 +271,114 @@ body {
 .footer__container {
   display: flex;
   flex-direction: column;
-  margin-top: 50px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+.footer__container .footer-left {
+  margin-top: 20px;
 }
 .footer__container .footer-left h2 {
   font-family: "AmsiPro-Ultra";
   font-size: 30px;
   text-transform: uppercase;
+  padding: 10px;
+}
+.footer__container .footer-left p {
+  font-family: "AmsiPro-Light";
+  font-size: 16px;
+  text-align: justify;
+  padding: 10px;
+}
+.footer__container .footer-left ul {
+  padding: 10px;
+}
+.footer__container .footer-left ul li {
+  list-style-type: none;
+  font-family: "AmsiPro-Light";
+  font-size: 16px;
+  text-align: left;
+}
+.footer__container .footer-left ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+.footer__container .footer-left ul li a:hover {
+  font-family: "AmsiPro-SemiBold";
+}
+.footer__container .footer-right {
+  margin-top: 20px;
+}
+.footer__container .footer-right .icon__footer {
+  font-size: 26px;
+  padding-left: 10px;
+  padding-top: 5px;
+}
+.footer__container .footer-right .icon__footer--fb {
+  padding-left: 0;
+}
+.footer__container .footer-right h4 {
+  font-family: "AmsiPro-Light";
+  font-size: 16px;
+  padding-left: 10px;
 }
 
-/*HomeTablet*//*# sourceMappingURL=styles.css.map */
+/*HomeTablet*/
+@media only screen and (min-width: 576px) {
+  .title__home h1 {
+    font-family: "AmsiPro-Ultra";
+    font-size: 60px;
+    text-transform: uppercase;
+    line-height: 48px;
+  }
+  .category__container {
+    grid-template-columns: repeat(3 100px);
+    grid-template-rows: 200px 200px;
+  }
+  .category__container .category__home {
+    height: 200px;
+  }
+  .category__container .category__home--1 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .category__container .category__home--2 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  .category__container .category__home--3 {
+    grid-column: 3/4;
+    grid-row: 1/2;
+  }
+  .category__container .category__home--4 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .category__container .category__home--5 {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+  .category__container .category__home--6 {
+    grid-column: 3/4;
+    grid-row: 2/3;
+  }
+}
+/*HomeDesktop*/
+@media only screen and (min-width: 992px) {
+  .title__home h1 {
+    font-family: "AmsiPro-Ultra";
+    font-size: 80px;
+    text-transform: uppercase;
+    line-height: 65px;
+  }
+  .category__container {
+    grid-template-columns: repeat(3 100px);
+    grid-template-rows: 300px 300px;
+  }
+  .category__container .category__home {
+    height: 300px;
+  }
+  .category__container .category__txt {
+    font-size: 26px;
+    line-height: 23px;
+  }
+}/*# sourceMappingURL=styles.css.map */

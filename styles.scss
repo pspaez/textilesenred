@@ -35,6 +35,18 @@ $green-color: #2AEA86;
     text-transform: uppercase;
     line-height: 38px;
 }
+@mixin home-title-Tablet{
+    font-family: "AmsiPro-Ultra";
+    font-size: 60px;
+    text-transform: uppercase;
+    line-height: 48px;
+}
+@mixin home-title-Desktop{
+    font-family: "AmsiPro-Ultra";
+    font-size: 80px;
+    text-transform: uppercase;
+    line-height: 65px;
+}
 
 /*global*/
 body {
@@ -217,7 +229,7 @@ body {
             align-items: center;
             padding: 20px;
                 img{
-                    width: 70px;
+                    width: 50px;
                 }
                 p{
                     padding: 20px;
@@ -230,7 +242,7 @@ body {
             align-items: center;
             padding: 20px;
                 img{
-                    width: 70px;
+                    width: 50px;
                 }
                 p{
                     padding: 20px;
@@ -278,22 +290,112 @@ body {
 .footer__container{
     display: flex;
     flex-direction: column;
-    margin-top: 50px;
+    margin-top: 40px;
+    margin-bottom: 20px;
         .footer-left{
-            h2{
-                font-family: "AmsiPro-Ultra";
-                font-size: 30px;
-                text-transform: uppercase;
+            margin-top: 20px;
+                h2{
+                    font-family: "AmsiPro-Ultra";
+                    font-size: 30px;
+                    text-transform: uppercase;
+                    padding: 10px;
+                }
+                p{
+                    font-family: "AmsiPro-Light";
+                    font-size: 16px;
+                    text-align: justify;
+                    padding: 10px;
+                }
+                ul{
+                    padding: 10px;
+                        li{
+                            list-style-type: none;
+                            font-family: "AmsiPro-Light";
+                            font-size: 16px;
+                            text-align: left;
+                                a{
+                                    text-decoration: none;
+                                    color: #fff;
+                                }
+                                a:hover{
+                                    font-family: "AmsiPro-SemiBold";
+                                }
+                    }
+                }
+        }
+        .footer-right{
+            margin-top: 20px;
+            .icon__footer{
+                font-size: 26px;
+                padding-left: 10px;
+                padding-top: 5px;
+            }
+            .icon__footer--fb{
+                padding-left: 0;
+            }
+            h4{
+                font-family: "AmsiPro-Light";
+                font-size: 16px;
+                padding-left: 10px;
             }
         }
 }
-
-
 /*HomeTablet*/
 @media only screen and (min-width:576px){
-
-
-
-
+.title__home{
+    h1{
+        @include home-title-Tablet;
+    }
+}
+.category__container{
+    grid-template-columns: repeat(3 100px);
+    grid-template-rows: 200px 200px;
+            .category__home{
+                height: 200px;
+            }
+            .category__home--1{
+                grid-column: 1/2;
+                grid-row: 1/2;
+            }
+            .category__home--2{
+                grid-column: 2/3;
+                grid-row: 1/2;
+            }
+            .category__home--3{
+                grid-column: 3/4;
+                grid-row: 1/2;
+            }
+            .category__home--4{
+                grid-column: 1/2;
+                grid-row: 2/3;
+            }
+            .category__home--5{
+                grid-column: 2/3;
+                grid-row: 2/3;
+            }
+            .category__home--6{
+                grid-column: 3/4;
+                grid-row: 2/3;
+            }
+    }  
+}
+/*HomeDesktop*/
+@media only screen and (min-width:992px){
+    .title__home{
+        h1{
+            @include home-title-Desktop;
+        }
+    }
+    .category__container{
+    grid-template-columns: repeat(3 100px);
+    grid-template-rows: 300px 300px;
+            .category__home{
+            height: 300px;
+            }
+            .category__txt{
+                font-size: 26px;
+                line-height: 23px;
+            }
+}
 }
 
